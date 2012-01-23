@@ -31,6 +31,8 @@ print 'BEGIN CONFIGURING ICEWEASEL'
 print 'Removing Firefox'
 os.system('apt-get remove -y firefox firefox-l10n-en-us')
 
+import shutil
+
 def elim_dir (dir_to_elim): 
     if (os.path.exists(dir_to_elim)):
         shutil.rmtree (dir_to_elim)
