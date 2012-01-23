@@ -28,8 +28,10 @@ print '==========================='
 print 'BEGIN CONFIGURING ICEWEASEL'
 
 # Remove Firefox, which is automatically replaced with Iceweasel
-print 'Removing Firefox'
-os.system('apt-get remove -y firefox firefox-l10n-en-us')
+print 'Removing Firefox, adding Iceweasel'
+os.system('apt-get purge -y firefox firefox-l10n-en-us')
+
+os.system('apt-get install -y xul-ext-flashblock xul-ext-noscript')
 
 import shutil
 
