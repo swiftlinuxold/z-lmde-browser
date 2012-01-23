@@ -31,8 +31,8 @@ print 'BEGIN CONFIGURING ICEWEASEL'
 print 'Removing Firefox, adding Iceweasel'
 os.system('apt-get purge -y firefox firefox-l10n-en-us')
 
-print 'Adding optional blockage of Flash, scripts, and ads'
-os.system('apt-get install -y xul-ext-flashblock xul-ext-noscript xul-ext-adblock-plus')
+print 'Adding optional blockage of Flash and ads'
+os.system('apt-get install -y xul-ext-flashblock xul-ext-adblock-plus')
 
 import shutil
 
