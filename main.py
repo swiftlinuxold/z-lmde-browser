@@ -31,6 +31,20 @@ print 'BEGIN CONFIGURING ICEWEASEL'
 print 'Removing Firefox'
 os.system('apt-get remove -y firefox firefox-l10n-en-us')
 
+def elim_dir (dir_to_elim): 
+    if (os.path.exists(dir_to_elim)):
+        shutil.rmtree (dir_to_elim)
+
+# The following directories should be DELETED:
+# /home/(username)/.config/chromium 
+# /home/(username)/.mozilla
+# /home/(username)/.opera
+print "Deleting Chromium, Mozilla, and Opera files in /home"
+elim_dir ("/home/" + uname + "/.config/chromium")
+elim_dir ("/home/" + uname + "/.mozilla")
+elim_dir ("/home/" + uname + "/.opera")
+
+
 
 print 'FINISHED CONFIGURING ICEWEASEL'
 print '=============================='
