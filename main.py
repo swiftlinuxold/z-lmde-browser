@@ -47,7 +47,9 @@ def elim_dir (dir_to_elim):
 print "Deleting Chromium, Mozilla, and Opera files in /home"
 elim_dir ("/home/" + uname + "/.config/chromium")
 elim_dir ("/home/" + uname + "/.mozilla")
+elim_dir ("/etc/skel/.mozilla")
 elim_dir ("/home/" + uname + "/.opera")
+elim_dir ("/etc/skel/.opera")
 
 
 
