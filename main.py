@@ -31,8 +31,8 @@ print 'BEGIN CONFIGURING ICEWEASEL'
 print 'Removing Firefox, adding Iceweasel'
 os.system('apt-get purge -y firefox firefox-l10n-en-us')
 
-print 'Adding optional blockage of Flash and ads'
-os.system('apt-get install -y xul-ext-flashblock xul-ext-adblock-plus')
+print 'Adding optional blockage of Flash'
+os.system('apt-get install -y xul-ext-flashblock')
 
 import shutil
 
@@ -51,7 +51,14 @@ elim_dir ("/etc/skel/.mozilla")
 elim_dir ("/home/" + uname + "/.opera")
 elim_dir ("/etc/skel/.opera")
 
+src = dir_develop + '/browser/etc/hosts'
+dest = '/etc/hosts'
+shutil.copyfile (src, dest)
 
+src = dir_develop + '/usr_local_bin/block-advert.sh'
+dest = '/usr/local/bin/block-advert.sh'
+shutil.copyfile (src, dest)
+os.system ('chmod a+rx ' + dest)
 
 print 'FINISHED CONFIGURING ICEWEASEL'
 print '=============================='
