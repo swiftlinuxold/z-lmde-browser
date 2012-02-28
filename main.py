@@ -55,7 +55,7 @@ src = dir_develop + '/browser/etc/hosts'
 dest = '/etc/hosts'
 shutil.copyfile (src, dest)
 
-src = dir_develop + '/usr_local_bin/block-advert.sh'
+src = dir_develop + '/browser/usr_local_bin/block-advert.sh'
 dest = '/usr/local/bin/block-advert.sh'
 shutil.copyfile (src, dest)
 os.system ('chmod a+rx ' + dest)
