@@ -1,1 +1,6 @@
 The z-antix-iceape repository contains the configuration files and scripts used to configure IceApe in the old Swift Linux.
+
+Iceweasel files to change:
+/usr/share/iceweasel/defaults/profile/bookmarks.html
+/etc/iceweasel/profile/bookmarks.html
+/usr/share/iceweasel/defaults/preferences/firefox.js

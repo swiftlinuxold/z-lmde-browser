@@ -24,8 +24,8 @@ else:
 # Everything up to this point is common to all Python scripts called by shared-*.sh
 # =================================================================================
 
-print '==========================='
-print 'BEGIN CONFIGURING ICEWEASEL'
+os.system ('echo ===========================')
+os.system ('echo BEGIN CONFIGURING ICEWEASEL')
 
 # Remove Firefox, which is automatically replaced with Iceweasel
 print 'Removing Firefox, adding Iceweasel'
@@ -51,5 +51,10 @@ elim_dir ("/etc/skel/.mozilla")
 elim_dir ("/home/" + uname + "/.opera")
 elim_dir ("/etc/skel/.opera")
 
-print 'FINISHED CONFIGURING ICEWEASEL'
-print '=============================='
+# Change default settings
+src = dir_develop + '/browser/preferences/firefox.js'
+dest = '/usr/share/iceweasel/defaults/preferences/firefox.js'
+shutil.copyfile(src, dest)
+
+os.system ('echo FINISHED CONFIGURING ICEWEASEL')
+os.system ('echo ==============================')
