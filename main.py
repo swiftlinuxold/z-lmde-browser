@@ -28,11 +28,14 @@ os.system ('echo ===========================')
 os.system ('echo BEGIN CONFIGURING ICEWEASEL')
 
 # Remove Firefox, which is automatically replaced with Iceweasel
-print 'Removing Firefox, adding Iceweasel'
-os.system('apt-get purge -y firefox firefox-l10n-en-us')
+os.system ('echo PURGING Firefox')
+os.system('apt-get purge -qq firefox firefox-l10n-en-us')
 
-print 'Adding optional blockage of Flash'
-os.system('apt-get install -y xul-ext-flashblock')
+os.system ('echo ADDING Iceweasel')
+os.system('apt-get install -qq iceweasel')
+
+os.system ('echo Adding optional blockage of Flash')
+os.system('apt-get install -qq xul-ext-flashblock')
 
 import shutil
 
@@ -51,7 +54,8 @@ elim_dir ("/etc/skel/.mozilla")
 elim_dir ("/home/" + uname + "/.opera")
 elim_dir ("/etc/skel/.opera")
 
-# Change default settings
+# Provide more privacy than Iceweasel's original settings
+# Private browsing activated by default
 src = dir_develop + '/browser/preferences/firefox.js'
 dest = '/usr/share/iceweasel/defaults/preferences/firefox.js'
 shutil.copyfile(src, dest)

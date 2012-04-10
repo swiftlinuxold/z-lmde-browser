@@ -399,27 +399,27 @@ pref("privacy.popups.policy",               1);
 pref("privacy.popups.usecustom",            true);
 pref("privacy.popups.showBrowserMessage",   true);
 
-pref("privacy.item.cookies",                true);
+pref("privacy.item.cookies",                false);
 
 pref("privacy.clearOnShutdown.history",     true);
 pref("privacy.clearOnShutdown.formdata",    true);
-pref("privacy.clearOnShutdown.passwords",   true);
+pref("privacy.clearOnShutdown.passwords",   false);
 pref("privacy.clearOnShutdown.downloads",   true);
 pref("privacy.clearOnShutdown.cookies",     true);
 pref("privacy.clearOnShutdown.cache",       true);
 pref("privacy.clearOnShutdown.sessions",    true);
-pref("privacy.clearOnShutdown.offlineApps", true);
-pref("privacy.clearOnShutdown.siteSettings", true);
+pref("privacy.clearOnShutdown.offlineApps", false);
+pref("privacy.clearOnShutdown.siteSettings", false);
 
 pref("privacy.cpd.history",                 true);
 pref("privacy.cpd.formdata",                true);
-pref("privacy.cpd.passwords",               true);
+pref("privacy.cpd.passwords",               false);
 pref("privacy.cpd.downloads",               true);
 pref("privacy.cpd.cookies",                 true);
 pref("privacy.cpd.cache",                   true);
 pref("privacy.cpd.sessions",                true);
-pref("privacy.cpd.offlineApps",             true);
-pref("privacy.cpd.siteSettings",            true);
+pref("privacy.cpd.offlineApps",             false);
+pref("privacy.cpd.siteSettings",            false);
 
 // What default should we use for the time span in the sanitizer:
 // 0 - Clear everything
@@ -427,8 +427,8 @@ pref("privacy.cpd.siteSettings",            true);
 // 2 - Last 2 Hours
 // 3 - Last 4 Hours
 // 4 - Today
-pref("privacy.sanitize.timeSpan", 0);
-pref("privacy.sanitize.sanitizeOnShutdown", true);
+pref("privacy.sanitize.timeSpan", 1);
+pref("privacy.sanitize.sanitizeOnShutdown", false);
 
 pref("privacy.sanitize.migrateFx3Prefs",    false);
 
@@ -795,7 +795,7 @@ pref("app.support.baseURL", "http://support.mozilla.com/1/firefox/%VERSION%/%OS%
 pref("security.alternate_certificate_error_page", "certerror");
 
 // Whether to start the private browsing mode at application startup
-pref("browser.privatebrowsing.autostart", true);
+pref("browser.privatebrowsing.autostart", false);
 
 // Whether we should skip prompting before starting the private browsing mode
 pref("browser.privatebrowsing.dont_prompt_on_enter", false);
