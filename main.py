@@ -56,5 +56,10 @@ src = dir_develop + '/browser/preferences/firefox.js'
 dest = '/usr/share/iceweasel/defaults/preferences/firefox.js'
 shutil.copyfile(src, dest)
 
+# Make Iceweasel go to the help page when starting up
+src = dir_develop + '/browser/usr_share_applications/iceweasel.desktop'
+dest = '/usr/share/applications/iceweasel.desktop'
+shutil.copyfile(src, dest)
+
 os.system ('echo FINISHED CONFIGURING ICEWEASEL')
 os.system ('echo ==============================')
