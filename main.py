@@ -27,10 +27,6 @@ else:
 os.system ('echo ===========================')
 os.system ('echo BEGIN CONFIGURING ICEWEASEL')
 
-# Remove Firefox, which is automatically replaced with Iceweasel
-os.system ('echo PURGING Firefox')
-os.system('apt-get purge -qq firefox firefox-l10n-en-us')
-
 os.system ('echo ADDING Iceweasel')
 os.system('apt-get install -qq iceweasel')
 
